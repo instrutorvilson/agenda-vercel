@@ -1,4 +1,5 @@
 const express = require('express')
+const app = express()
 
 app.get('/ola',(req, res)=>{
   res.status(200).send('Ola')
