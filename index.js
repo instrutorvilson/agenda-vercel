@@ -4,13 +4,13 @@ const cors = require('cors')
 
 const contatos = require('./contatos')
 const produtos = require('./produtos')
-const { verificaToken } = require('./midlewares')
+//const { verificaToken } = require('./midlewares')
 
 const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.use('/contatos', verificaToken , contatos)
+app.use('/contatos', contatos)
 app.use('/produtos', produtos)
 
 app.listen(process.env.PORT, () => {

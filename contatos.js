@@ -1,21 +1,23 @@
 const express = require('express')
 const router = express.Router()
-const pool = require('./config')
-const { validaCadastro } = require('./midlewares')
+//const pool = require('./config')
+//const { validaCadastro } = require('./midlewares')
 
 router.get('/', async (req, res) => {
-   try {
+   /*try {
       let cliente = await pool.connect()
       let dados = await cliente.query('select * from tb_contatos')
       cliente.end()
       res.send(dados.rows)
    } catch (error) {
       res.send(error.message)
-   }
+   }*/
+   res.send('pagina de contatos')
    
 })
 
-router.post('/', validaCadastro, async (req, res) => {
+/*
+router.post('/', async (req, res) => {
    try {          
          let cliente = await pool.connect()
          let dados =
@@ -81,7 +83,7 @@ router.put('/:id', validaCadastro, async(req, res) => {
    }
    
 })
-
+*/
 
 
 
